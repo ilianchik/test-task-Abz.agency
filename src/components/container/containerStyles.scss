@@ -1,0 +1,14 @@
+@import "../../index.scss";
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  @include medium {
+    max-width: 1024px;
+  }
+  @include small {
+    max-width: 768px;
+  }
+  @include verySmall {
+    width: 100%;
+  }
+}

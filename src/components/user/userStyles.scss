@@ -1,0 +1,32 @@
+.user {
+  background-color: white;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  font-size: 16px;
+  line-height: 26px;
+
+  img {
+    border-radius: 100%;
+    width: 70px;
+  }
+  .text-container {
+    text-align: center;
+    width: 100%;
+    a {
+      display: block;
+      cursor: pointer;
+    }
+  }
+  .clipped-text {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Use ellipsis for better visual effect, can be changed to clip */
+  }
+}
