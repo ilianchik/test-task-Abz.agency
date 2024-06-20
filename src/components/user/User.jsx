@@ -2,7 +2,7 @@ import "./userStyles.scss";
 function User({ user }) {
   return (
     <div className="user">
-      <img src={user.photo} alt="user image" />
+      <img src={user.photo || "/photo-cover.svg"} alt="user image" />
       <p className="clipped-text ">{user.name}</p>
       <div className="text-container">
         <p className="clipped-text ">{user.position}</p>

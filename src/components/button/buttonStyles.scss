@@ -1,13 +1,15 @@
+@import "../../index.scss";
+
 .button {
-  background: #f4e041;
+  background: $primary-color;
   padding: 6px 23px;
   border: none;
   border-radius: 80px;
   cursor: pointer;
-  color: rgba(0, 0, 0, 0.87);
+  color: $main-text-color;
 
   &:disabled {
-    background-color: #b4b4b4;
+    background-color: $disabled-color;
     cursor: not-allowed;
     color: white;
   }

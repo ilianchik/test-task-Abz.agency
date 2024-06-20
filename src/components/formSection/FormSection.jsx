@@ -6,7 +6,7 @@ import Button from "../button/Button";
 function FormSection() {
   const { data, isSuccess } = useGetPositions();
   const { mutate } = useUploadUser();
-
+  const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,8 +14,6 @@ function FormSection() {
     position_id: "",
     photo: null,
   });
-
-  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -68,9 +66,17 @@ function FormSection() {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length === 0) {
-      mutate(formData);
-
-      console.log("Form data is valid. Submitting form data:", formData);
+      mutate(formData, {
+        onSuccess: () => {
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            position_id: "",
+            photo: null,
+          });
+        },
+      });
     } else {
       setErrors(validationErrors);
     }

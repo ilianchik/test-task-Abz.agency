@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
+$primary-color: #f4e041;
+$main-text-color: rgba(0, 0, 0, 0.87);
+$secondary-text-color: #7e7e7e;
+$accent-color: #00bdd3;
+$background-color: #f8f8f8;
+$disabled-color: #b4b4b4;
+$error-text: #cb3d40;
+
 *,
 *:before,
 *:after {
@@ -79,7 +87,7 @@ main {
 
 body {
   line-height: 1;
-  background-color: #f8f8f8;
+  background-color: $background-color;
 }
 
 ol,

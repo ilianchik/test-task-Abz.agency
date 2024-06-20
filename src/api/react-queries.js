@@ -6,6 +6,7 @@ import {
 } from "@tanstack/react-query";
 import axios from "axios";
 
+//get users
 export function useGetUsers() {
   return useInfiniteQuery({
     queryKey: ["getUsers"],
@@ -22,6 +23,8 @@ export function useGetUsers() {
     },
   });
 }
+
+//get positions
 export function useGetPositions() {
   return useQuery({
     queryKey: ["getPositions"],
@@ -32,6 +35,7 @@ export function useGetPositions() {
   });
 }
 
+//get token
 const fetchToken = async () => {
   const response = await fetch(
     "https://frontend-test-assignment-api.abz.agency/api/v1/token"
@@ -40,6 +44,7 @@ const fetchToken = async () => {
   return data.token;
 };
 
+//upload user
 export const useUploadUser = () => {
   const queryClient = useQueryClient();
 
